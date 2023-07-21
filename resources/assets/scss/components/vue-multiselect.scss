@@ -1,0 +1,114 @@
+@import "~vue-multiselect/dist/vue-multiselect.min.css";
+
+.dark-mode {
+    .multiselect {
+        color: inherit;
+
+        .multiselect__tags {
+            border-color: $gray-600;
+            background: $dark-bg-color;
+        }
+
+        .multiselect__input,
+        .multiselect__single {
+            //background: $dark-bg-color;
+            color: inherit;
+        }
+
+        .multiselect__input::placeholder {
+            color: #fff;
+        }
+
+        //.multiselect__option--selected {
+        //    background: $dark-bg-color;
+        //}
+
+        .multiselect__content-wrapper {
+            background-color: $dark-bg-color;
+        }
+
+        &__option--selected {
+            background: rgb($white,.3);
+            color: inherit;
+        }
+    }
+
+    .multiselect--disabled {
+        color: $gray-400 !important;
+        background-color: lighten($dark-bg-color, 15%) !important;
+        background: lighten($dark-bg-color, 15%) !important;
+
+        .multiselect__select {
+            background: transparent;
+        }
+    }
+}
+
+
+.multiselect {
+    min-height: 34px;
+    border-radius: 0.25em;
+
+    .multiselect__tags-wrap {
+        display: inline-flex;
+        flex-wrap: wrap;
+    }
+
+    &.multiselect__select,
+    &.multiselect--disabled {
+        opacity: 1;
+        background-color: $gray-200;
+
+        .multiselect__tags,
+        .multiselect__single,
+        .multiselect__select {
+            background: transparent;
+        }
+    }
+
+    .multiselect__select {
+        height: 100%;
+
+        &::before {
+            top: 70%;
+            z-index: 9999;
+        }
+    }
+
+    .multiselect__placeholder {
+        margin-bottom: 0.3rem;
+    }
+
+    .multiselect__tags {
+        min-height: 34px;
+        border-radius: 0.25rem;
+        box-shadow: none;
+        border-color: #ced4da;
+        padding: 0.5rem 0.75rem 0.3rem;
+    }
+
+    .multiselect__input,
+    .multiselect__single {
+        margin-bottom: 0;
+        color: #666;
+    }
+
+    .multiselect--active {
+        z-index: 9999;
+    }
+
+    .multiselect__content-wrapper {
+        z-index: 3;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+.multiselect--active {
+    z-index: 9999;
+}
+
+.multiselect__input,
+.multiselect__single {
+    background: transparent;
+}

@@ -1,0 +1,26 @@
+@import "~dropzone/dist/dropzone.css";
+
+.dark-mode {
+    .dropzone {
+        background: inherit;
+    }
+
+    .fileUploadMultiple .files-group .fileThumbnail .thumbnail {
+        background: inherit;
+    }
+
+    .files-group .fileThumbnail .thumbnail .fileicon-inner {
+        background-color: inherit;
+    }
+}
+
+.dropzone {
+  min-height: 50px !important;
+  border:     5px solid rgba(0, 0, 0, .1);
+  padding:    10px 0 10px 10px;
+}
+
+.dropzone.dz-drag-hover {
+  border-style: dashed;
+  background:   rgba(0, 0, 0, .1);
+}
